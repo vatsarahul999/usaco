@@ -38,7 +38,7 @@ public class friday {
 		for (int i = 1900; i < (1900 + N); i++) {
 			for (int j = 1; j <= 12; j++) {
 
-				int key = (day + 12) % 7;
+				int key = (day + 13) % 7;
 				int count = result.get(key);
 				count++;
 				result.put(key, count);
@@ -47,9 +47,9 @@ public class friday {
 					day++;
 			}
 		}
-		for (int i = 5; i < 12; i++) {
+		for (int i = 6; i <= 12; i++) {
 			out.print(Integer.toString(result.get(i % 7)));
-			if(i==11)
+			if(i==12)
 				out.print("\n");
 			else
 				out.print(" ");
